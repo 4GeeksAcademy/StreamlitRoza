@@ -7,7 +7,12 @@ import os
 # --- 1. Load the trained model pipeline ---
 # Ensure the path to your saved model is correct relative to this script.
 # The model was saved in 'models/titanic_survival_predictor_pipeline.joblib'
-model_path = 'models/titanic_survival_predictor_pipeline.joblib'
+# Use an absolute path or path relative to the current script file
+script_dir = os.path.dirname(__file__) # Get the directory where this script is located
+model_path = os.path.join(script_dir, '..', 'models', 'titanic_survival_predictor_pipeline.joblib')
+
+# Optional: Add a print statement here for debugging the path
+# st.write(f"Attempting to load model from: {model_path}")
 
 try:
     model_pipeline = joblib.load(model_path)
