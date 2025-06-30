@@ -9,7 +9,7 @@ import os
 # The model was saved in 'models/titanic_survival_predictor_pipeline.joblib'
 # Use an absolute path or path relative to the current script file
 script_dir = os.path.dirname(__file__) # Get the directory where this script is located
-model_path = os.path.join(script_dir, '..', 'models', 'titanic_survival_predictor_pipeline.joblib')
+model_path = os.path.join(script_dir, 'models', 'titanic_survival_predictor_pipeline.joblib')
 
 # Optional: Add a print statement here for debugging the path
 # st.write(f"Attempting to load model from: {model_path}")
@@ -87,3 +87,10 @@ if st.button("Predict Survival"):
 
 st.markdown("---")
 st.caption("Developed as part of the 4Geeks Academy ML Web App Tutorial.")
+
+# Instructions to run this app locally in Codespaces:
+# 1. Save this code as 'src/streamlit_app.py'
+# 2. Open the Codespaces terminal.
+# 3. Navigate to the root of your project.
+# 4. Run: streamlit run src/streamlit_app.py --server.port "$PORT"
+# (The --server.port "$PORT" is important for Codespaces preview)
